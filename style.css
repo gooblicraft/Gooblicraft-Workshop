@@ -101,7 +101,7 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 60vh;
+    min-height: 65vh;
 
     display: flex;
     flex-direction: column;
@@ -138,6 +138,17 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+.goobli_buttons a:hover{
+    text-decoration: underline;
+    width: 20rem;
+    height: 6rem;
+
+    border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
+    background-color: #5e2066;
+    box-shadow: inset 0 0 0 0.2rem #772981;
+    color: #FFFFFF;
+}
 .dl_btn{
     background-color: #3C8527;
     text-align: center;
@@ -160,3 +171,4 @@ header{
     width: 40rem;
     background-color: transparent;
 }
+
