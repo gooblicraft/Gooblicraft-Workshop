@@ -15,6 +15,11 @@
     font-family: 'Minecraft-Regular'; /* Minecraft Font na Import */
     background-color: #48494A;
     color: #FFFFFF;
+    letter-spacing: 0.1rem;
+}
+
+.h1, p{
+    background-color: transparent;
 }
 
 header{
@@ -87,7 +92,7 @@ header{
     background-color: transparent;
 }
 
-.gooblicraft h1,p{
+.gooblicraft h1, .gooblicraft p{
     text-shadow: 0.1rem 0.2rem 0.5rem #000000;
     background-color: transparent;
 }
@@ -129,11 +134,10 @@ header{
     border-width: 0.25rem 0.25rem 0.25rem 0.25rem;
     border-color: #1E1E1F;
     font-family: 'minecraft-ten';
-    font-size: 2rem;
     padding: 0.7rem 0.7rem ;
     width: 19rem;
     height: 5rem;
-
+    font-size: 1.8rem;
     display: inline-block;
     display: flex; 
     justify-content: center;
@@ -180,7 +184,6 @@ header{
     align-items: center;
     gap: 1rem;
     padding: 2rem 0rem;
-    background-color: #393A3B;
 }
 
 .know_about1, .know_about2{
@@ -208,7 +211,7 @@ header{
 }
 
 .get_addons h1, .encounter_smt h1{
-    text-shadow: 0.1rem 0.2rem 0.5rem #000000;
+    text-shadow: 0.1rem 0.2rem 0.05rem #000000;
     font-family: 'Minecraft-Ten';
     font-size: 2rem;
     background-color: #313233;
@@ -232,3 +235,70 @@ header{
     background-image: url("images/get_encounter_img.png");
 }
 
+.brief_faqs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.faq_title{
+    text-shadow: 0.1rem 0.2rem 0.05rem #000000;
+    text-align: center;
+    font-family: 'Minecraft-Ten';
+    font-size: 2rem;
+    background-color: #3C8527;
+    box-shadow: inset 0 0 0 0.2rem #599747;
+    padding: 1rem;
+    border: #1E1E1F solid 0.25rem;
+    width: 100%;
+}
+
+.is_survival, .is_java, .is_not_show{
+    background-color: #313233;
+    box-shadow: inset 0 0 0 0.2rem #3c3e3f;
+    padding: 0.5rem;
+    border: #1E1E1F solid 0.25rem;
+    width: 100%;
+}
+.is_survival h1, .is_java h1, .is_not_show h1{
+    text-shadow: 0.1rem 0.2rem 0.05rem #000000;
+    text-align: left;
+    margin: 1rem;
+    font-size: 2rem;
+    background-color: transparent;
+}
+
+.is_survival p, .is_java p, .is_not_show p{
+    text-align: left;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.goobli_footer{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    width: 100%;
+    height: 10%;
+    background-color: #3C8527;
+}
+
+.footer_icon{
+    display: flex;
+    padding: 1rem;
+    flex: 1;
+}
+
+.footer_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex:3;
+    background-color: #3C8527;
+}
