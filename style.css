@@ -74,6 +74,7 @@ header{
 .hero_section{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .gooblicraft{
@@ -137,12 +138,13 @@ header{
     display: flex; 
     justify-content: center;
     align-items: center;
+
+    transition: all 0.3s ease;
 }
 
 .goobli_buttons a:hover{
     text-decoration: underline;
-    width: 20rem;
-    height: 6rem;
+    transform: scale(1.05);
 
     border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
     background-color: #5e2066;
@@ -172,11 +174,48 @@ header{
     background-color: transparent;
 }
 
-.about1{
+.know_about1{
     display: flex;
-    justify-content: center;
-
-    background-color: #3C8527;
-    width: 100%;
-    height: 30%;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 10%;
+    border-style: solid;
+    border-color: #000000; 
+    border-width: 0.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: stretch;
 }
+
+.get_addons{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #313233;
+    flex: 7;
+}
+
+.get_addons h1{
+    text-shadow: 0.1rem 0.2rem 0.5rem #000000;
+    font-family: 'Minecraft-Ten';
+    font-size: 3rem;
+    background-color: #313233;
+}
+.get_addons p{
+    font-size: 2rem;
+}
+
+.get_addon_img{
+    flex: 1;
+    background-image: url("images/get_addon_img.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #212122;
+    background-origin: content-box;
+    padding: 1rem;
+}
+
