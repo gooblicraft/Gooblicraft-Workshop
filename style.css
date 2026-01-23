@@ -174,7 +174,16 @@ header{
     background-color: transparent;
 }
 
-.know_about1{
+.need_know{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0rem;
+    background-color: #393A3B;
+}
+
+.know_about1, .know_about2{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -182,40 +191,44 @@ header{
     height: 10%;
     border-style: solid;
     border-color: #000000; 
-    border-width: 0.5rem;
+    border-width: 0.25rem;
     box-sizing: border-box;
     overflow: hidden;
     align-items: stretch;
 }
 
-.get_addons{
+.get_addons, .encounter_smt{
     display: flex;
     flex-direction: column;
     justify-content: left;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1rem;
+    padding: 1rem;
     background-color: #313233;
     flex: 7;
 }
 
-.get_addons h1{
+.get_addons h1, .encounter_smt h1{
     text-shadow: 0.1rem 0.2rem 0.5rem #000000;
     font-family: 'Minecraft-Ten';
-    font-size: 3rem;
+    font-size: 2rem;
     background-color: #313233;
 }
-.get_addons p{
-    font-size: 2rem;
+.get_addons p, .encounter_smt p{
+    font-size: 1.2rem;
 }
 
-.get_addon_img{
+.get_addon_img, .get_encounter_img{
     flex: 1;
     background-image: url("images/get_addon_img.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #212122;
+    background-color: #161616;
     background-origin: content-box;
     padding: 1rem;
+}
+
+.get_encounter_img{
+    background-image: url("images/get_encounter_img.png");
 }
 
