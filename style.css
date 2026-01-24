@@ -22,6 +22,8 @@
     background-color: transparent;
 }
 
+/* NAVIGATION BAR */
+
 header{
     background-color: #E6E8EB;
     padding: 1rem 3rem;
@@ -173,7 +175,7 @@ header{
     box-shadow: inset 0 0 0 0.2rem #599747;
 }
 
-.pf_btn{
+.wf_btn{
     background-color: #D0D1D4;
     text-align: center;
     box-shadow: inset 0 0 0 0.2rem #ECEDEE;
@@ -289,6 +291,8 @@ header{
     margin: 1rem;
     font-size: 1.2rem;
 }
+
+/* FOOTER */
 
 .goobli_footer{
     display: flex;

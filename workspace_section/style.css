@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Minecraft-Regular';
+    src: url('fonts/MinecraftRegular.otf');
+}
+
+@font-face {
+    font-family: 'Minecraft-Ten';
+    src: url('fonts/MinecraftTen.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Minecraft-Regular'; /* Minecraft Font na Import */
+    background-color: #48494A;
+    color: #FFFFFF;
+    letter-spacing: 0.1rem;
+}
+
+.h1,h2, p{
+    background-color: transparent;
+}
+
+/* NAVIGATION BAR */
+
+header{
+    background-color: #E6E8EB;
+    padding: 1rem 3rem;
+    border-style: solid;
+    border-color: #b1b2b5;
+    border-width: 0rem 0rem 0.45rem 0rem;
+}
+
+.navbar{
+    background-color: #E6E8EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding{
+    background-color: #E6E8EB;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand_title{
+    background-color: #E6E8EB;
+    font-family: 'Minecraft-Ten';
+    font-size: 2rem;
+    color: #48494A;
+}
+
+.goobli_icon{
+    width: 4rem;
+    border-radius: 1rem;
+}
+
+.nav_links{
+    background-color: #E6E8EB;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav_links a{ 
+    color: #48494A;
+    background-color: #E6E8EB;      
+    text-decoration: none;  /*Pantanggal ng underline sa hyperlink*/
+    font-size: 1.2rem;
+}
+
+.nav_links a:hover{
+    color: #3C8527;
+    text-decoration: underline;
+    text-underline-offset: 0.35rem;
+}
+
+/* hero section */
+
+.hero_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.hero_section h1{
+    text-shadow: 0.1rem 0.2rem 0.05rem #000000;
+    text-align: center;
+    font-family: 'Minecraft-Ten';
+    font-size: 2rem;
+    background-color: #3C8527;
+    box-shadow: inset 0 0 0 0.2rem #599747;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    border: #1E1E1F solid 0.25rem;
+    width: 100%;
+}
+
+.block_cards{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.c_plain_block, .c_rotateble_block{
+    display: flex;
+    background-color: #D0D1D4;
+    width: 12rem;
+    height: 12rem;
+}
