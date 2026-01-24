@@ -18,7 +18,7 @@
     letter-spacing: 0.1rem;
 }
 
-.h1, p{
+.h1,h2, p{
     background-color: transparent;
 }
 
@@ -79,6 +79,7 @@ header{
 .hero_section{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
 }
 
@@ -90,14 +91,20 @@ header{
     gap: 1.5rem;
     width: 40rem;
     background-color: transparent;
+    text-shadow: 0.1rem 0.2rem 0.5rem #000000;
 }
 
-.gooblicraft h1, .gooblicraft p{
-    text-shadow: 0.1rem 0.2rem 0.5rem #000000;
+.gooblicraft h1{
+    font-family: 'Minecraft-Ten';
+    font-size: 4rem;
     background-color: transparent;
 }
 
-.featured{
+.gooblicraft p{
+    font-size: 1.5rem;
+}
+
+.featured_bg{
     background: linear-gradient(
       rgba(67, 80, 82, 0.418), /* A black overlay with 50% opacity */
       rgba(67, 80, 82, 0.418)
@@ -107,18 +114,23 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    min-height: 65vh;
 
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
     gap: 3rem;
-    align-items: flex-end;
-    padding-right: 10%;
     padding-top: 5%;
+    padding-bottom: 5%;
 
     border-style: solid;
     border-color: #000000;
     border-width: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.featured_content{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10%;
+    background-color: transparent;
 }
 .goobli_buttons{
     background-color: transparent;
@@ -284,13 +296,31 @@ header{
     align-content: flex-start;
     width: 100%;
     height: 10%;
-    background-color: #3C8527;
+    background-color: #161616;
+    border-top: 0.5rem solid #000000;
+    margin-top: 2rem;
 }
 
 .footer_icon{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 1rem;
     flex: 1;
+    gap: 1rem;
+    background-color: #161616;
+}
+
+.footer_icon img{
+    width: 7.5rem;
+    height: auto;
+    background: transparent;
+    /* border: 0.5rem solid #ffffff; */
+}
+.footer_icon h2{
+    font-family: 'Minecraft-Ten';
+    font-size: 1.3rem;
 }
 
 .footer_content{
@@ -300,5 +330,70 @@ header{
     align-items: center;
     text-align: center;
     flex:3;
-    background-color: #3C8527;
+    gap: 1.5rem;
+    background-color: #161616;
+}
+
+.footer_socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    align-items: center;
+    background-color: transparent;
+}
+
+.footer_socials img, .footer_socials a{
+    background-color: transparent;
+}
+
+.goobli_discord{
+    width: 10rem;
+    height: auto;
+}
+.all_socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.all_socials a{
+    width: 3.5rem;
+    height: auto;
+    background: transparent;
+}
+
+/* For Mobile and Tablet */
+@media (max-width: 768px) {
+    html{
+        font-size: 12px;
+    }
+
+    .footer_socials img, .footer_socials a{
+        width: 90%;
+        height: auto;
+    }
+
+    .scroll_mark{
+        width: 80%;
+    }
+
+    .featured_content{
+        padding-right: 2%;
+    }
+
+    .goobli_buttons a{
+        width: 15rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 480px){
+    html{
+        font-size: 8px;
+    }
 }
