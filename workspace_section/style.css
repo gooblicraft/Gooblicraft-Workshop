@@ -109,9 +109,19 @@ header{
     flex-direction: row;
     gap: 1rem;
 }
-.c_plain_block, .c_rotateble_block{
+
+.block_card{
+    display: flex;
+    flex-direction: column;
+    background-color: #D0D1D4; 
+    border: 0.25rem solid #000000;
+    /* ... at iba pang styles ... */
+    cursor: pointer;
+}
+
+/* .c_plain_block, .c_rotateble_block{
     display: flex;
     background-color: #D0D1D4;
     width: 12rem;
     height: 12rem;
-}
+} */
