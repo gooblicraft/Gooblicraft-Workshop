@@ -104,24 +104,51 @@ header{
     width: 100%;
 }
 
-.block_cards{
+.c_block_options{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
+    margin-left: 2rem;
 }
 
 .block_card{
+    box-shadow: inset 0 0 0 0.2rem #edeef1;
+    align-items: center;
     display: flex;
     flex-direction: column;
     background-color: #D0D1D4; 
     border: 0.25rem solid #000000;
-    /* ... at iba pang styles ... */
-    cursor: pointer;
-}
-
-/* .c_plain_block, .c_rotateble_block{
-    display: flex;
-    background-color: #D0D1D4;
     width: 12rem;
     height: 12rem;
-} */
+    /* ... at iba pang styles ... */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.block_card:hover{
+    transform: scale(1.05);
+    text-decoration-color: #3C8527;
+}
+
+.block_card img{
+    margin-top: 0.5rem;
+    background-color: #D0D1D4;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    align-self: center;
+    padding: 1rem;
+}
+
+.block_card h2{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Minecraft-Ten';
+    font-size: 1.5rem;
+    color: #1E1E1F;
+}
+
+.block_card:hover h2{
+    color: #3C8527;
+}
