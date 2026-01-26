@@ -1,5 +1,3 @@
-console.log("Script File is Now Connected")
-
 const blockOptions = [
     { type: 'plain', label: 'Plain', img:'images/cards/plain_block.png'},
     { type: 'rotateble', label: 'Rotateble', img:'images/cards/plain_block.png'},
@@ -11,19 +9,19 @@ const blockOptions = [
     { type: 'door', label: 'Door', img:'images/cards/plain_block.png'}
 ]
 
-const container = document.getElementById('make_option_block');
+const container = document.getElementById('make_block_option');
 
 blockOptions.forEach(option =>{
-    const option_block = document.createElement('div');
-    option_block.className='block_card';
-
-    option_block.onclick = function() {
+    const block_option = document.createElement('div');
+    block_option.className='block_card';
+    
+    block_option.onclick = function() {
         openModal(option.type);
     };
 
-    option_block.innerHTML = `
+    block_option.innerHTML = `
         <img src="${option.img}" alt="${option.label}">
         <h2>${option.label}</h2>
     `;
-    container.appendChild(option_block);
+    container.appendChild(block_option);
 })
