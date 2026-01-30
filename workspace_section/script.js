@@ -7,22 +7,31 @@ const blockOptions = [
     { id:6, type: 'vertical', label: 'Vertical', img:'images/cards/vertical_block.png'},
     { id:7, type: 'horizontal', label: 'Horizontal', img:'images/cards/horizontal_block.png'},
     { id:8, type: 'door', label: 'Door', img:'images/cards/door_block.png'}
-]
+];
 
 const container = document.getElementById('make_block_option');
+// const modal = document.getElementById('myModal');
 
 function clickBlockOption(id){
     alert(`Clicked ${blockOptions[id-1].label}`);
-}
+};
 
 blockOptions.forEach(option =>{
+    // For creating multiple buttons 
     const block_option = document.createElement('button');
-    block_option.className='block_card';
-    block_option.onclick= () => clickBlockOption(option.id);
+    block_option.className ='block_card';
+    block_option.id = option.type;
+    
+    console.log(block_option)
+    block_option.onclick = () => clickBlockOption(option.id);
 
     block_option.innerHTML = `
         <img src="${option.img}" alt="${option.label}">
         <h2>${option.label}</h2>
     `;
+
+    
     container.appendChild(block_option);
-})
+
+    // For creating modal for the buttons
+});
