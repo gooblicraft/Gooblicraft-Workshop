@@ -22,7 +22,7 @@ blockOptions.forEach(option =>{
     block_option.className ='block_card';
     block_option.id = option.type;
     
-    console.log(block_option)
+    // console.log(block_option);
     block_option.onclick = () => clickBlockOption(option.id);
 
     block_option.innerHTML = `
@@ -34,4 +34,10 @@ blockOptions.forEach(option =>{
     container.appendChild(block_option);
 
     // For creating modal for the buttons
+
+    const block_modal = document.createElement('div');
+    block_modal.id = `block_modal_${option.type}`;
+    console.log(block_modal.id);
+
+    container.appendChild(block_modal);
 });
