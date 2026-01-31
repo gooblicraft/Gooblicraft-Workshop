@@ -34,7 +34,40 @@
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+    width: 90%;
 }
+
+.modal-header h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black, solid,0.2rem;
+    font-family: 'Minecraft-Ten';
+    font-size: 1.5rem;
+    width: 90%;
+    height: auto;
+    background-color: #C0910F;
+    margin-left: 1.25rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+/* The Close Button */
+.modal-header button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-header button:hover,
+.modal-header button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 .modal-content{
     display: flex;
@@ -47,11 +80,15 @@
     position: relative;
 }
 
-.modal-content label{
+.style_block{
+    margin-top: 1rem; margin-left: 1rem;
+}
+
+.style_block label{
     flex-direction: column;
     font-family: 'Minecraft-Ten';
     background-color: #3C8527;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border-style: solid;
     border-width: 0.15rem;
     border-color: black;
@@ -60,7 +97,7 @@
     margin: 0.25rem;
 }
 
-.modal-content input{
+.style_block input{
     font-size: 1rem;
     border-style: solid;
     border-width: 0.1rem;
@@ -70,5 +107,5 @@
     width: 120%;
     margin: 0.25rem;
     padding: 0.25rem;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
 }
