@@ -22,6 +22,34 @@
     background-color: transparent;
 }
 
+/* Scroll Bar Customization */
+/* 1. Ang Lapad ng Scrollbar */
+.left-section::-webkit-scrollbar {
+    width: .75rem; /* Medyo makapal para madaling pindutin */
+}
+
+/* 2. Ang "Riles" o Background ng Scrollbar */
+.left-section::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Very Dark Gray */
+    border-left: 0.15rem solid black; /* Border sa gilid */
+}
+
+/* 3. Ang "Handle" o yung gumagalaw na bar */
+.left-section::-webkit-scrollbar-thumb {
+    background-color: #3C8527; /* Yung green na gamit mo sa labels */
+    border: 0.15rem solid black;
+}
+
+.left-section::-webkit-scrollbar-thumb:hover {
+    background-color: #4cae32; /* Lighter green pag hover */
+}
+
+/* 4. Effect kapag tinutok ang mouse (Hover) */
+.left-section::-webkit-scrollbar-thumb:hover {
+    background-color: #6E2461; /* Mas light na gray pag hover */
+    cursor: pointer;
+}
+
 /* --- MODAL CONTAINER --- */
 .modal * {
     box-sizing: border-box;
@@ -103,7 +131,7 @@
     flex-direction: column;
     gap: 1rem;
 
-    max-height: 70vh; 
+    max-height: 80vh; 
     overflow-y: auto;
     padding-right: .5rem; 
 }
@@ -122,7 +150,7 @@
     flex-grow: 1; 
     background-color: #282829;
     border: .15rem solid black;
-    min-height: 25rem; 
+    min-height: 27.5rem; 
 }
 
 /* --- INPUT STYLING --- */
@@ -181,6 +209,6 @@
     text-transform: uppercase;
 }
 
-.btn-blue { background-color: #3C91C0; }
+.btn-blue { background-color: #459EC4; }
 .btn-yellow { background-color: #C0910F; }
-.btn-purple { background-color: #8E44AD; flex: 2 !important;}
+.btn-purple { background-color: #6E2461; flex: 2 !important;}
