@@ -7,23 +7,86 @@
     <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    <!-- The Modal Example-->
     <div id="myModal" class="modal">
+        
         <div class="modal-header">
-            <h1>Creating a Plain Block</h1>
-            <button>&times;</button>
+            <h1 id="modalTitle">CREATING A PLAIN BLOCK</h1>
+            <button class="close-btn" onclick="closeModal()">&times;</button>
         </div>
 
-        <!-- Modal content -->
         <div class="modal-content">
-            <form class="style_block">
-                <label for="block_name1">Block Name:</label>
-                <input type="text" id="block_name1" name="block_name1"/>
-            </form>
-            <form class="style_block">
-                <label for="block_name2">Block Name:</label>
-                <input type="text" id="block_name2" name="block_name2"/>
-            </form>
+
+            <div class="left-section">
+                
+                <div class="style_block">
+                    <label for="block_name">BLOCK ID NAME:</label>
+                    <input type="text" id="block_id_name" placeholder="e.g. Ruby Block"/>
+                </div>
+
+                <div class="style_block">
+                    <label for="category">MENU CATEGORY:</label>
+                    <select id="category">
+                        <option value="nature">Nature</option>
+                        <option value="construction">Construction</option>
+                        <option value="items">Items</option>
+                    </select>
+                </div>
+
+                <div class="style_block">
+                    <label for="block_name">Block Tag:</label>
+                    <input type="text" id="block_tag" placeholder="e.g. only_plain_block"/>
+                </div>
+
+                <div class="style_block">
+                    <label for="block_name">Display Name:</label>
+                    <input type="text" id="display_name" placeholder="e.g. Creator Block 1"/>
+                </div>
+
+                <div class="style_block">
+                    <label for="block_name">Geometry:</label>
+                    <input type="text" id="block_geometry" placeholder="e.g. plain_block_model1"/>
+                </div>
+
+                <div class="style_block">
+                    <label for="texture">TEXTURE NAME:</label>
+                    <input type="text" id="texture" placeholder="ruby_block_texture"/>
+                </div>
+
+                <div class="style_block">
+                    <label for="render_method">Render Method:</label>
+                    <select id="render_method">
+                        <option value="opaque">Opaque</option>
+                        <option value="alpha_test">Alpha-Test</option>
+                        <option value="alpha_test_single">Alpha-Test Single Sided</option>
+                        <option value="blend">Blend</option>
+                    </select>
+                </div>
+
+                <div class="style_block">
+                    <label for="collision_box">Collision Box:</label>
+                    <textarea id="collision_box" placeholder="{left-right,up-down,front-back}{x,y,z}"></textarea>
+                </div>
+
+                <div class="style_block">
+                    <label for="selection_box">Selection Box:</label>
+                    <textarea id="selection_box" placeholder="{left-right,up-down,front-back}{x,y,z}"></textarea>
+                </div>
+
+            </div>
+
+            <div class="right-section">
+                
+                <div class="preview-box">
+                    </div>
+
+                <div class="modal-footer">
+                    <button class="btn-blue">COPY</button>
+                    <button class="btn-yellow">SAVE</button>
+                    <button class="btn-purple" onclick="generateJSON()">CREATE NEW BLOCK</button>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </body>
