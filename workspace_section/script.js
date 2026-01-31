@@ -10,10 +10,11 @@ const blockOptions = [
 ];
 
 const container = document.getElementById('make_block_option');
-// const modal = document.getElementById('myModal');
+const modal = document.getElementById('myModal');
 
 function clickBlockOption(id){
     alert(`Clicked ${blockOptions[id-1].label}`);
+    modal.style.display = 'block';
 };
 
 blockOptions.forEach(option =>{
@@ -36,7 +37,7 @@ blockOptions.forEach(option =>{
     // For creating modal for the buttons
 
     const block_modal = document.createElement('div');
-    block_modal.id = `block_modal_${option.type}`;
+    block_modal.id = `modal_${option.type}`;
     console.log(block_modal.id);
 
     container.appendChild(block_modal);
