@@ -1,53 +1,28 @@
-@font-face {
-    font-family: 'Minecraft-Regular';
-    src: url('fonts/MinecraftRegular.otf');
+
+/* Custom Scrollbar Style sa Left Section */
+/* Lapad ng Scrollbar*/
+.left_section::-webkit-scrollbar {
+    width: .75rem; 
 }
 
-@font-face {
-    font-family: 'Minecraft-Ten';
-    src: url('fonts/MinecraftTen.ttf');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Minecraft-Regular'; /* Minecraft Font na Import */
-    background-color: #48494A;
-    color: #FFFFFF;
-    letter-spacing: .1rem;
-}
-
-.h1,h2, p{
-    background-color: transparent;
-}
-
-/* Scroll Bar Customization */
-/* 1. Ang Lapad ng Scrollbar */
-.left-section::-webkit-scrollbar {
-    width: .75rem; /* Medyo makapal para madaling pindutin */
-}
-
-/* 2. Ang "Riles" o Background ng Scrollbar */
-.left-section::-webkit-scrollbar-track {
+/* Background na Dinadaanan ng Scrolbar */
+.left_section::-webkit-scrollbar-track {
     background: #1a1a1a; /* Very Dark Gray */
-    border-left: 0.15rem solid black; /* Border sa gilid */
+    border-left: 0.15rem solid black; 
 }
 
-/* 3. Ang "Handle" o yung gumagalaw na bar */
-.left-section::-webkit-scrollbar-thumb {
-    background-color: #3C8527; /* Yung green na gamit mo sa labels */
+/* Yung Dinadrag */
+.left_section::-webkit-scrollbar-thumb {
+    background-color: #3C8527; 
     border: 0.15rem solid black;
 }
 
-.left-section::-webkit-scrollbar-thumb:hover {
-    background-color: #4cae32; /* Lighter green pag hover */
+.left_section::-webkit-scrollbar-thumb:hover {
+    background-color: #4cae32; 
 }
 
-/* 4. Effect kapag tinutok ang mouse (Hover) */
-.left-section::-webkit-scrollbar-thumb:hover {
-    background-color: #6E2461; /* Mas light na gray pag hover */
-    cursor: pointer;
+.left_section::-webkit-scrollbar-thumb:hover {
+    background-color: #6E2461; 
 }
 
 /* --- MODAL CONTAINER --- */
@@ -115,7 +90,7 @@
 }
 
 /* --- MAIN CONTENT (The Two Columns) --- */
-.modal-content {
+.modal_content {
     display: flex;
     flex-direction: row; 
     gap: 1.5rem;
@@ -125,7 +100,7 @@
 }
 
 /* --- LEFT SIDE (INPUTS) --- */
-.left-section {
+.left_section {
     flex: 0.8; 
     display: flex;
     flex-direction: column;
@@ -137,7 +112,7 @@
 }
 
 /* --- RIGHT SIDE (PREVIEW + BUTTONS) --- */
-.right-section {
+.right_section {
     flex: 1.2; 
     display: flex;
     flex-direction: column;
@@ -146,7 +121,7 @@
 }
 
 /* The Big Dark Box */
-.preview-box {
+.preview_box {
     flex-grow: 1; 
     background-color: #282829;
     border: .15rem solid black;
@@ -192,13 +167,13 @@
 }
 
 /* --- FOOTER BUTTONS --- */
-.modal-footer {
+.modal_footer {
     display: flex;
     gap: .5rem;
     width: 100%;
 }
 
-.modal-footer button {
+.modal_footer button {
     font-family: 'Minecraft-Ten';
     font-size: 1.2rem;
     color: white;
@@ -209,6 +184,6 @@
     text-transform: uppercase;
 }
 
-.btn-blue { background-color: #459EC4; }
-.btn-yellow { background-color: #C0910F; }
-.btn-purple { background-color: #6E2461; flex: 2 !important;}
+.btn_blue { background-color: #459EC4; }
+.btn_yellow { background-color: #C0910F; }
+.btn_purple { background-color: #6E2461; flex: 2 !important;}

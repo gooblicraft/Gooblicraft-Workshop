@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Goobli's Workspace</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="modal.css">
     </head>
     <body>
         <!-- THIS IS FOR THE NAVBAR -->
@@ -23,31 +24,33 @@
             </nav>
         </header>
 
+        <!-- Eto yung mga option block with js codes para dikona isa isahin yung code, script.js -->
         <main class="hero_section">
             <h1>"Create a Block"</h1>
-
-            </div>
-            <!-- The Modal Example-->
-            <div id="myModal" class="modal" style="display: none;">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <form>
-                        <label for="block_name">Block Name:</label>
-                        <input type="text" id="block_name" name="block_name"/>
-                    </form>
-                </div>
-            </div>
-            
             <h1>"Select a Block Type to be Made"</h1>
-
-            <div class="c_block_options" id="make_block_option">
-                <!-- <div class="plain_block">
-                    <img src="images/cards/plain_block.png" alt="plain block">
-                    <h2>Plain</h2>
-                </div> -->
-            </div>
-        
+            <div class="c_block_options" id="make_block_option"></div>
         </main>
+
+        <div id="blocks_modal" class="modal">
+            <div class="modal-header">
+                <h1 id="modalTitle">CREATING A PLAIN BLOCK</h1>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+
+           <div class="modal_content">
+                <div class="left_section" id="inputContainer"></div>
+                
+                <!-- Right Section Of The Modal -->
+                <div class="right_section">
+                    <div class="preview_box"></div>
+                    <div class="modal_footer">
+                        <button class="btn_blue">COPY</button>
+                        <button class="btn_yellow">SAVE</button>
+                        <button class="btn_purple" onclick="generateJSON()">CREATE NEW BLOCK</button>
+                    </div>
+                </div>
+           </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>

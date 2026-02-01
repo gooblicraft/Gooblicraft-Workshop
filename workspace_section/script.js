@@ -9,13 +9,8 @@ const blockOptions = [
     { id:8, type: 'door', label: 'Door', img:'images/cards/door_block.png'}
 ];
 
+// For Creating Block Options Dynamically
 const container = document.getElementById('make_block_option');
-const modal = document.getElementById('myModal');
-
-function clickBlockOption(id){
-    alert(`Clicked ${blockOptions[id-1].label}`);
-    modal.style.display = 'block';
-};
 
 blockOptions.forEach(option =>{
     // For creating multiple buttons 
@@ -31,14 +26,113 @@ blockOptions.forEach(option =>{
         <h2>${option.label}</h2>
     `;
 
-    
     container.appendChild(block_option);
-
-    // For creating modal for the buttons
-
-    const block_modal = document.createElement('div');
-    block_modal.id = `modal_${option.type}`;
-    console.log(block_modal.id);
-
-    container.appendChild(block_modal);
 });
+
+//  Toggling Modal
+const modal = document.getElementById('blocks_modal');
+
+function clickBlockOption(id){
+    alert(`Clicked ${blockOptions[id-1].label}`);
+    modal.style.display = 'flex';
+};
+
+const inputFields = [
+    {
+        type: 'text',
+        id: 'block_id_name',
+        placeholder: 'e.g. example_block1',
+        label: 'Block ID Name:'
+    },
+    {
+        type: 'select',
+        id: 'category',
+        options: [
+            { val: 'nature', text: 'Nature' },
+            { val: 'construction', text: 'Construction' },
+            { val: 'items', text: 'Items' }
+        ],
+        label: 'Menu Category:'
+    },
+    {
+        type: 'text',
+        id: 'block_tag',
+        placeholder: 'e.g. only_plain_blocks',
+        label: 'Block Tag:'
+    },
+    {
+        type: 'text',
+        id: 'display_name',
+        placeholder: 'e.g. Example Block 1',
+        label: 'Display Name:'
+    },
+    {
+        type: 'text',
+        id: 'block_geometry',
+        placeholder: 'e.g. example_block_model1',
+        label: 'Geometry:'
+    },
+    {
+        type: 'text',
+        id: 'texture_name',
+        placeholder: 'e.g. example_block_texture1',
+        label: 'Texture Name:'
+    },
+    {
+        type: 'select',
+        id: 'render_method',
+        options: [
+            { val: 'opaque', text: 'Opaque' },
+            { val: 'alpha_test', text: 'Alpha Test' },
+            { val: 'alpha_test_single', text: 'Alpha Test Single Sided' },
+            { val: 'blend', text: 'Blend' }
+        ],
+        label: 'Render Method:'
+    },
+    { 
+        type: 'textarea', 
+        label: 'COLLISION BOX:', 
+        id: 'collision_box', 
+        placeholder: '{left-right,up-down,front-back}{x,y,z}' 
+    },
+    { 
+        type: 'textarea', 
+        label: 'SELECTION BOX:', 
+        id: 'selection_box', 
+        placeholder: '{left-right,up-down,front-back}{x,y,z}' 
+    }
+]
+
+ function createInputField(inputField){
+    let inputHtml = '';
+    
+    if(inputField.type === 'select'){
+        const optionsHtml = inputField.options.map(option =>
+            `<option value="${option.val}">${option.text}</option>`
+        ).join('');
+
+        inputHtml = `<select id="${inputField.id}">${optionsHtml}</select>`;
+    }
+    else if(inputField.type === 'textarea'){
+        inputHtml = `<textarea id="${inputField.id}" placeholder="${inputField.placeholder}"></textarea>`;
+    }
+    else{
+        inputHtml = `<input type="text" id="${inputField.id}" placeholder="${inputField.placeholder}"/>`;
+    }
+    return `
+        <div class="style_block">
+            <label for="${inputField.id}">${inputField.label}</label>
+            ${inputHtml}
+        </div>
+    `;
+ }
+
+ function renderInputFields(){
+    const inputFieldsContainer = document.getElementById('inputContainer');
+
+    if(!inputFieldsContainer)return;
+
+    inputFieldsContainer.innerHTML = inputFields.map(field => createInputField(field)).join('');
+ }
+
+ document.addEventListener('DOMContentLoaded', renderInputFields);
