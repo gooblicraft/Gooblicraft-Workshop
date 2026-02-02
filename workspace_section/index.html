@@ -42,11 +42,17 @@
                 
                 <!-- Right Section Of The Modal -->
                 <div class="right_section">
-                    <div class="preview_box"></div>
+
+                    <div class="preview_box" id="previewArea">
+                        <pre><code id="jsonCode">
+                            // The JSON will appear here...
+                        </code></pre>
+                    </div>
+
                     <div class="modal_footer">
-                        <button class="btn_blue">COPY</button>
-                        <button class="btn_yellow">SAVE</button>
-                        <button class="btn_purple" onclick="generateJSON()">CREATE NEW BLOCK</button>
+                        <button class="btn_copy" onclick="copyCode()">COPY</button>
+                        <button class="btn_save" onclick="saveCode()">SAVE</button>
+                        <button class="btn_create" onclick="generateJSON()">CREATE NEW BLOCK</button>
                     </div>
                 </div>
            </div>
