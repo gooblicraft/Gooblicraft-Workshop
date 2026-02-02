@@ -32,7 +32,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 
@@ -129,7 +129,7 @@
     flex-grow: 1; 
     background-color: #282829;
     border: .15rem solid black;
-    min-height: 27.5rem;
+    min-height: 34%;
     padding: 1rem;
     position: relative;
     overflow: auto; 
@@ -180,7 +180,7 @@
     font-family: 'Minecraft-Regular'; 
 }
 
-/* --- FOOTER BUTTONS --- */
+/* --- MODAL FOOTER BUTTONS --- */
 .modal_footer {
     display: flex;
     gap: .5rem;

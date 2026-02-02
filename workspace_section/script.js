@@ -33,8 +33,11 @@ blockOptions.forEach(option =>{
 const modal = document.getElementById('blocks_modal');
 
 function clickBlockOption(id){
-    alert(`Clicked ${blockOptions[id-1].label}`);
     modal.style.display = 'flex';
+};
+
+function closeModal(){
+    modal.style.display = 'none';
 };
 
 // For Creating Input Fields Dynamically (Dito me mag-aadd ng input fields na pinapalabas)
