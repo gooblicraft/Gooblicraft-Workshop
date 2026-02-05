@@ -29,17 +29,6 @@ blockOptions.forEach(option =>{
     container.appendChild(block_option);
 });
 
-//  Toggling Modal
-const modal = document.getElementById('blocks_modal');
-
-function clickBlockOption(id){
-    modal.style.display = 'flex';
-};
-
-function closeModal(){
-    modal.style.display = 'none';
-};
-
 // For Creating Input Fields Dynamically (Dito me mag-aadd ng input fields na pinapalabas)
 const inputFields = [
     {
@@ -116,7 +105,7 @@ const inputFields = [
 ]
 
 // My function to create input fields and tinatabulate
- function createInputField(inputField){
+function createInputField(inputField){
     let inputHtml = '';
     
     if(inputField.type === 'select'){
@@ -141,10 +130,10 @@ const inputFields = [
             ${inputHtml}
         </div>
     `;
- }
+}
 
- // Rendering the input fields
- function renderInputFields(){
+// Rendering the input fields
+function renderInputFields(){
     const inputFieldsContainer = document.getElementById('inputContainer');
 
     if(!inputFieldsContainer)return;
@@ -153,9 +142,9 @@ const inputFields = [
 
     inputFieldsContainer.addEventListener('input', updateLivePreview);
     updateLivePreview()
- }
+}
 
- document.addEventListener('DOMContentLoaded', renderInputFields);
+document.addEventListener('DOMContentLoaded', renderInputFields);
 
 // Live Preview Function sa Right Section (Yung Box)
  
@@ -169,6 +158,25 @@ function safeJsonParse(input) {
         return input; 
     }
 }
+
+//  Toggling Modal
+const modal = document.getElementById('blocks_modal');
+let modalShowType = '';
+
+function clickBlockOption(id){
+    modal.style.display = 'flex';
+    let modalShowType = id;
+
+    console.log(modalShowType);
+    return
+};
+
+
+// Closing Modal
+function closeModal(){
+    modal.style.display = 'none';
+};
+
 
 function updateLivePreview(){
     // Block ID
@@ -206,7 +214,9 @@ function updateLivePreview(){
  
     const rawSelection = document.getElementById('selection_box').value;
     const selectionBox_val = rawSelection ? safeJsonParse(rawSelection) : safeJsonParse('{"origin": [-8, 0, -8], "size": [16, 16, 16]}');
- 
+
+
+    // Eto yung nilalaman nung json code live preview
     const previewData = {
         "format_version": "1.21.70",
         "minecraft:block": {
@@ -262,6 +272,9 @@ function updateLivePreview(){
         jsonCodeElement.textContent = JSON.stringify(previewData, null, 4);
     }
 }
+
+
+
 
 async function copyCode() {
     // Get the text from the input field
