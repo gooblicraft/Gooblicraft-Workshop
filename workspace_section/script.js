@@ -161,14 +161,11 @@ function safeJsonParse(input) {
 
 //  Toggling Modal
 const modal = document.getElementById('blocks_modal');
-let modalShowType = '';
 
 function clickBlockOption(id){
     modal.style.display = 'flex';
-    let modalShowType = id;
 
-    console.log(modalShowType);
-    return
+    console.log(id);
 };
 
 
